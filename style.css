@@ -6,7 +6,7 @@
 }
 body
 {
-	background-image : url("assets/bg.jpg");
+	background-image : url("/assets/bg.jpg");
 	background-color: var(--black);
 }
 p
@@ -39,7 +39,7 @@ td
 }
 .Top
 {
-	background-image : url("assets/bgblur.jpg");
+	background-image : url("/assets/bgblur.jpg");
 	background-color: #212a4b; 
 	display: flex;
 	justify-content: center;
@@ -54,7 +54,7 @@ td
 }
 .Box
 {
-	background-image : url("assets/bgblur.jpg");
+	background-image : url("/assets/bgblur.jpg");
 	background-color: #212a4b; 
 	display: flex;
 	justify-content: center;
