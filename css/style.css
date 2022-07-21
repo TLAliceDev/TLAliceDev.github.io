@@ -13,12 +13,20 @@ p
 {
 	color: #f6d6bd; 
 	font-family: Domine;
+	text-indent: 5%;
 }
 hr
 {
 	border: 0;
 	border-top: 8px solid #3d4373;
 	border-radius: 10px 20px;
+}
+hr.Two
+{
+	border: 0;
+	border-top: 4px solid #3d4373;
+	border-radius: 10px 20px;
+	margin: 0% 2%;
 }
 table
 {
@@ -63,5 +71,17 @@ td
 	border-radius: 5% 5%;
 	border-color: #46517f;
 	color: #f6d6bd;
+	font-family: Domine;
+	text-indent: 5%;
+}
+.TextBox
+{
+	background-image : url("../assets/bgblur.jpg");
+	background-color: #212a4b; 
+	border: 3px solid;
+	border-radius: 5% 5%;
+	border-color: #46517f;
+	color: #f6d6bd;
+	margin: 5%;
 	font-family: Domine;
 }
