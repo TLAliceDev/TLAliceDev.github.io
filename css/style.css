@@ -2,11 +2,14 @@
 {
 	--black: #08141e; 
 	--dark-blue: #0f2a3f; 
-	--blue: #20394f; 
+	--blue: #8a4fb5; 
+    --textc: #ecd2ff;
+    --boxbgc: #301b3fdd;
+    --dividerc: #60367f;
 }
 body
 {
-	background-image : url("../assets/bg.jpg");
+	background-image : url("../assets/skulls.png");
 	background-color: var(--black);
 }
 p
@@ -26,6 +29,7 @@ hr.Two
 	border: 0;
 	border-top: 4px solid #3d4373;
 	border-radius: 10px 20px;
+    border-color: var(--dividerc);
 	margin: 0% 2%;
 }
 table
@@ -47,7 +51,7 @@ td
 }
 .Top
 {
-	background-image : url("../assets/bgblur.jpg");
+	background-image : url("../assets/skullsblur.png");
 	background-color: #212a4b; 
 	display: flex;
 	justify-content: center;
@@ -55,30 +59,30 @@ td
 	border: 3px solid;
 	border-radius: 10px 40px;
 	border-color: #46517f;
-	color: #f6d6bd;
+    color: var(--textc);
 	font-family: Domine;
 	font-weight: bold;
-	font-size: 150%
+	font-size: 150%;
 }
 .Box
 {
-	background-image : url("../assets/bgblur.jpg");
+	background-image : url("../assets/skullsblur.png");
 	background-color: #212a4b; 
 	border: 3px solid;
 	border-radius: 5% 5%;
 	border-color: #46517f;
-	color: #f6d6bd;
+	color: var(--textc);
 	font-family: Domine;
 	text-indent: 5%;
 	margin: 0 auto;
 }
 .TextBox
 {
-	background-color: #212a4bdd; 
+	background-color: var(--boxbgc); 
 	border: 3px solid;
 	border-radius: 5% 5%;
 	border-color: #46517f;
-	color: #f6d6bd;
+	color: var(--textc);
 	margin: 5%;
 	font-family: Domine;
 	width: 50vw;
