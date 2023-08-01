@@ -8,7 +8,7 @@
 (defvar *posts* '())
 
 (defun new-devlog (title &rest content)
-  (setf *posts* (append *posts* (apply #'create-post title content) '("<br>"))))
+  (setf *posts* (append *posts* (apply #'create-post title content) '("<hr>"))))
 
 
 (new-devlog "Symmages"

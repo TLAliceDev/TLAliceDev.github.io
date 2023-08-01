@@ -36,6 +36,9 @@
 (defun line-break ()
   "<br>")
 
+(defun hr ()
+  "<hr>")
+
 (defun code (&rest text)
   (concatenate 'string "<p style=\"quote\">" (apply #'concatenate 'string text) "</p>"))
 
