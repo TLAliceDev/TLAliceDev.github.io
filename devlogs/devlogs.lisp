@@ -22,6 +22,28 @@
   "Looking back on it, there were a lot of improvements that could be made to the game. The main one being ways of making it so that the player cannot just repeat the same set of simple actions to easily cheese the game. The main way of fixing that that I thought of was map variation and hazards. While the game is most definitely Not Good™, I'd say I'm generally happy with what I managed to get done in the strict timeframe."
   (image "Symmages.gif" "gif of the game"))
 
+(new-devlog "Blisp"
+  (heading 4 "Making a Lisp-based Static Site Generator")
+  "When i decided to actually start using this site, i also decided to make a static site generator to make writing posts for it easier."
+  (paragraph "The vast majority of SSGs out there obviously use Markdown for writing their posts. It makes sense, it's a good, well known format that is great for this stuff, "
+	     (bold "any smart person would obviously choose to use it."))
+  (line-break)
+  "So instead i obviously chose to write a Common Lisp program with functions that format text into various HTML tags and then puts them all together into a final web page"
+  (hr)
+  "My primary motivation for doing so was mostly just the fact that i like Lisp and wanted an excuse to use it. I feel like if i tried hard enough i could come up with some excuses as possible advantages that doing things this way instead of just markdown might bring, but i cannot think of any at the moment"
+  "As to how this works:"
+  "I have a series of functions such as (PARAGRAPH), (BOLD), (IMAGE) that take in some arguments (usually just a string of text) and returns them packed properly inside of their corresponding HTML tags, for example:"
+  "(bold \"This Text is Bold \" (italics \"And This One Is Also Italic\"))"
+  "returns the string \"<b>This Text is Bold <i>And This One Is Also Italic</i></b>"
+  (hr)
+  "For putting them together into a final page, certain parameters, such as a template page and mandatory paths, are given through variables, and Blisp then searches for certain keywords in the template page and replaces them with the correct element."
+  "For example, the $$TITLE$$ keyword gets replaced with the page title, which is passed to the (CREATE-POST) function"
+  (hr)
+  "A fun aspect of this process is that it easily allows me to create pages that themselves create other pages. For example, this very page's source code is inside of the source code that generates every page for the Devlogs section of the blog, and then automatically generates the devlogs.html page with links to individual devlogs itself"
+  (hr)
+  "In a little bit of meta-fun, the source code for this current page is displayed below:"
+  (image "blisp_page_code.png" "A nvim screenshot showcasing the source code used to generate the page you're currently on. Most of the text is the exact same as above"))
+
 
 (apply #'create-post "devlogs"
   *posts*)

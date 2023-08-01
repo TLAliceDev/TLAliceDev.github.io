@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Blisp </title>
+    <link rel="stylesheet" href=../css/style.css>
+  </head>
+  <body>
+    <h1 class="titlebar"> 
+      Blisp
+    </h1>
+    <ul class="sidebar">
+       <li class="sidebar_element"><a href=../index.html>About Me</a></li>
+       <li class="sidebar_element"><a href="https://tlalice.itch.io">My Games</a></li>
+       <li class="sidebar_element"><a href=devlogs.html>Devlogs</a></li>
+       <li class="sidebar_element"><a href=$$DWPATH$$>Doctor Who Stuff</a></li>
+       <hr>
+       <li class="sidebar_element">Other Peoples!</li>
+       <hr>
+       <li class="sidebar_element"><a href="https://terradev64.github.io/">TerraDev64</a></li>
+    </ul>
+    <div class="content">
+      <p><h4>Making a Lisp-based Static Site Generator</h4></p><p>When i decided to actually start using this site, i also decided to make a static site generator to make writing posts for it easier.</p><p><p>The vast majority of SSGs out there obviously use Markdown for writing their posts. It makes sense, it's a good, well known format that is great for this stuff, <b>any smart person would obviously choose to use it.</b></p></p><p><br></p><p>So instead i obviously chose to write a Common Lisp program with functions that format text into various HTML tags and then puts them all together into a final web page</p><p><hr></p><p>My primary motivation for doing so was mostly just the fact that i like Lisp and wanted an excuse to use it. I feel like if i tried hard enough i could come up with some excuses as possible advantages that doing things this way instead of just markdown might bring, but i cannot think of any at the moment</p><p>As to how this works:</p><p>I have a series of functions such as (PARAGRAPH), (BOLD), (IMAGE) that take in some arguments (usually just a string of text) and returns them packed properly inside of their corresponding HTML tags, for example:</p><p>(bold "This Text is Bold " (italics "And This One Is Also Italic"))</p><p>returns the string "<b>This Text is Bold <i>And This One Is Also Italic</i></b></p><p><hr></p><p>For putting them together into a final page, certain parameters, such as a template page and mandatory paths, are given through variables, and Blisp then searches for certain keywords in the template page and replaces them with the correct element.</p><p>For example, the $$TITLE$$ keyword gets replaced with the page title, which is passed to the (CREATE-POST) function</p><p><hr></p><p>A fun aspect of this process is that it easily allows me to create pages that themselves create other pages. For example, this very page's source code is inside of the source code that generates every page for the Devlogs section of the blog, and then automatically generates the devlogs.html page with links to individual devlogs itself</p><p><hr></p><p>In a little bit of meta-fun, the source code for this current page is displayed below:</p><p><img src="blisp_page_code.png" alt=A nvim screenshot showcasing the source code used to generate the page you're currently on. Most of the text is the exact same as above></img></p>
+    </div>
+  </body>
+</html>
