@@ -1,6 +1,6 @@
 :root
 {
-  --color-0: #28282e; 
+  --color-0: #28282ef0; 
   --color-1: #6c5671; 
   --color-2: #d9c8bf; 
   --color-3: #f98284; 
@@ -26,8 +26,7 @@
 body {
   background-color: var(--color-0);
   background-image: url("../assets/edit.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  image-rendering: pixelated;
 }
 
 .titlebar {
