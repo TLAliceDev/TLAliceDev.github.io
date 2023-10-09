@@ -25,7 +25,7 @@
 
 body {
   background-color: var(--color-0);
-  background-image: url("assets/edit.png");
+  background-image: url("../assets/edit.png");
 }
 
 .titlebar {
