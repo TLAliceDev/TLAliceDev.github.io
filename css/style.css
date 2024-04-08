@@ -26,6 +26,8 @@
 body {
   background-color: var(--color-0);
   background-image: url("../assets/edit.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   image-rendering: pixelated;
 }
 
